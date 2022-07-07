@@ -1,4 +1,5 @@
 const genSensorCalData = require('../generators/SensorCalibrationData.js');
+const genBaseCalData = require('../generators/BaseStationCalibrationData.js');
 
 const getSensorCalData = (req, res) => {
   let data = genSensorCalData();
@@ -6,7 +7,8 @@ const getSensorCalData = (req, res) => {
 };
 
 const getSensorCalOutput = (req, res) => {
-  //To-Do
+  let data = genBaseCalData();
+  res.send(data);
 };
 
 const getBaseCalData = (req, res) => {
