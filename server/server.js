@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
+const router = require('./routes.js');
 const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('test');
-});
+/* middleware */
+app.use(router);
 
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
