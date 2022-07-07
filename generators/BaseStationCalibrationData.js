@@ -48,6 +48,4 @@ const genBaseCalData = () => {
   return newData;
 };
 
-console.log(genBaseCalData());
-
 module.exports = genBaseCalData;
