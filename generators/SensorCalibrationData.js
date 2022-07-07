@@ -60,4 +60,4 @@ const genSensorCalData = () => {
   return newData;
 };
 
-module.exports = {genSensorCalData};
+module.exports = genSensorCalData;
