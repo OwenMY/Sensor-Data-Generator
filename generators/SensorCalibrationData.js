@@ -18,14 +18,14 @@ const generateNumber = (min, max) => {
 };
 
 const generateSensorData = () => {
-  let g = generateNumber;
-  let startTime = Date.now();
   let sampleSize = Math.floor(generateNumber(10000, 15000));
   let timeSeries = [];
 
   for (let i = 0; i < sampleSize + 1; i++) {
+    let g = generateNumber;
+
     let coord = {
-      time: startTime,
+      time: ('' + i).padStart(5, '0'),
       x: Number(g(0, 25).toFixed(5)),
       y: Number(g(0, 25).toFixed(5)),
       z: Number(g(0, 25).toFixed(5))
@@ -49,7 +49,7 @@ const getSensors = (qty) => {
   return randomSensors;
 };
 
-const generateSCD = () => {
+const genSensorCalData = () => {
   const sensorQTY = generateNumber(4, 12);
 
   const newData = {
@@ -60,6 +60,4 @@ const generateSCD = () => {
   return newData;
 };
 
-console.log(generateSCD());
-
-module.exports = {generateSCD};
+module.exports = {genSensorCalData};
