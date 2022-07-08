@@ -14,7 +14,7 @@ const genSensorData = (sensors) => {
   let sensorsCopy = sensors.slice();
 
   sensors.forEach(sensor => {
-    let sampleSize = generateNumber(100000, 120000);
+    let sampleSize = Math.round(generateNumber(100000, 120000));
     let timeSeries = [];
 
     for (let i = 0; i < sampleSize + 1; i++) {
@@ -37,7 +37,7 @@ const genSensorData = (sensors) => {
 };
 
 const genBaseCalData = () => {
-  let randomID = generateNumber(1, 4);
+  let randomID = Math.floor(generateNumber(1, 4));
 
   let newData = {
     calibration_date: new Date(),

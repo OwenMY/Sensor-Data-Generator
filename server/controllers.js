@@ -7,12 +7,12 @@ const getSensorCalData = (req, res) => {
 };
 
 const getSensorCalOutput = (req, res) => {
-  let data = genBaseCalData();
-  res.send(data);
+  //
 };
 
 const getBaseCalData = (req, res) => {
-  //To-Do
+  let data = genBaseCalData();
+  res.send(data);
 };
 
 const getPerformanceEvalOutput = (req, res) => {
