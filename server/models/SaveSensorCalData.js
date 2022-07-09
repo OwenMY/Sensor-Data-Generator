@@ -9,7 +9,7 @@ const saveSensorCalData = (data) => {
 
 const getFileNum = () => {
   const query =  `
-    SELECT id FROM sensor_filename ORDER BY id DESC LIMIT 1
+    SELECT id FROM sensor_filenames ORDER BY id DESC LIMIT 1
   `;
 
   return pool.query(query)
@@ -17,7 +17,7 @@ const getFileNum = () => {
 
 const saveFileName = (fileNum = 0) => {
   const query = `
-    INSERT INTO sensor_filename (id, file_name) VALUES($1, $2)
+    INSERT INTO sensor_filenames (id, file_name) VALUES($1, $2)
     RETURNING *
   `;
 
