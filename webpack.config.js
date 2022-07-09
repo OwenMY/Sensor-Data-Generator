@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+  mode: "development",
   entry: './src/index.jsx',
   output: {
     filename: 'bundle.js',
@@ -8,7 +9,23 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.css$/, use: 'css-loader'},
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(jsx|js)$/,
+        exclude:  /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
     ],
+  },
+  devServer: {
+    static: './dist',
   },
 };

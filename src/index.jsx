@@ -1,4 +1,5 @@
-import ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-const root = ReactDOM.createRoot(document.getElementsById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<h1>Sensor Data Generator</h1>);
