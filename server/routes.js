@@ -10,4 +10,6 @@ router.get('/SensorCalibrationOutput', controllers.getSensorCalOutput);
 
 router.get('/PerformanceEvalutionOutput', controllers.getPerformanceEvalOutput);
 
+router.get('/Search', controllers.getSearchQuery);
+
 module.exports = router;

@@ -23,9 +23,14 @@ const getPerformanceEvalOutput = (req, res) => {
   //To-Do
 };
 
+const getSearchQuery = (req, res) => {
+  //To-Do
+};
+
 module.exports = {
   getBaseCalData,
   getPerformanceEvalOutput,
   getSensorCalData,
-  getSensorCalOutput
+  getSensorCalOutput,
+  getSearchQuery
 };
