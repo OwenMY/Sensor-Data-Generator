@@ -1,5 +1,4 @@
 const pool = require('../../server/db.js');
-const queries = require('../../server/queries.js');
 
 const saveSensorCalData = (data) => {
   getFileNum()
@@ -9,19 +8,38 @@ const saveSensorCalData = (data) => {
 };
 
 const getFileNum = () => {
-  return pool.query(queries.getSensorCalID)
+  const query =  `
+    SELECT id FROM sensor_filename ORDER BY id DESC LIMIT 1
+  `;
+
+  return pool.query(query)
 };
 
 const saveFileName = (fileNum = 0) => {
-  return pool.query(queries.saveSensorID, [fileNum + 1, `SCF${fileNum + 1}`])
+  const query = `
+    INSERT INTO sensor_filename (id, file_name) VALUES($1, $2)
+    RETURNING *
+  `;
+
+  return pool.query(query, [fileNum + 1, `SCF${fileNum + 1}`])
 };
 
 const saveSensors = (fileName, data) => {
+  const insertQuery = `
+    INSERT INTO sensor_cal_data(
+      file_name,
+      calibration_date,
+      sensor_unique_id,
+      sensor_type,
+      sensor_data
+    ) VALUES($1, $2, $3, $4, $5)
+  `;
+
   data.sensors.forEach(sensor => {
     const sensorData = JSON.stringify(sensor.sensor_data);
 
     const query = {
-      text: queries.insertSensorCalDataQuery,
+      text: insertQuery,
       values: [
         fileName,
         data.calibration_date,
