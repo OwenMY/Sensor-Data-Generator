@@ -1,0 +1,12 @@
+.app {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  -ms-transform: translateY(-50%);
+  transform: translateY(200%);
+  /* top: 50%; */
+}
+
+.poop {
+  color: yellow;
+}
