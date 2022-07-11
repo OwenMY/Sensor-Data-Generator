@@ -2,7 +2,9 @@ import React from 'react';
 
 const Loading = () => {
   return (
-    <div>Loading...</div>
+    <div className="loading">
+      <img src={require('./../../src/assets/gear.png')}></img>
+    </div>
   )
 };
 

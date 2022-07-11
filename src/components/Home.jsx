@@ -6,18 +6,18 @@ const Home = () => {
     <div className="home">
       <h1>Sensor Data Generator</h1>
       <div className="button-ctr">
-        <button>
-          <Link className="btn" to="/calibrate-sensor">Calibrate Sensors</Link>
-        </button>
-        <button>
-          <Link className="btn" to="/calibrate-base">Calibrate Base</Link>
-        </button>
-        <button>
-          <Link className="btn" to="/validate-system">Validate System</Link>
-        </button>
-        <button>
-          <Link className="btn" to="/search">Search</Link>
-        </button>
+        <Link to="/calibrate-sensor">
+          <button className="btn" >Calibrate Sensors</button>
+        </Link>
+        <Link to="/calibrate-base">
+          <button  className="btn">Calibrate Base</button>
+        </Link>
+        <Link to="/validate-system">
+          <button className="btn">Validate System</button>
+        </Link>
+        <Link to="/search">
+          <button className="btn">Search</button>
+        </Link>
       </div>
     </div>
   );
