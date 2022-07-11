@@ -13,8 +13,8 @@ body {
 .app {
   margin: auto;
   width: 50vw;
-  height: 100vh;
   position: relative;
+  align-items: center;
 }
 
 h1 {
@@ -29,15 +29,29 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 1em;
+  a:link {
+    text-decoration: none;
+  }
   button {
-    border-radius: 3px;
-    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
     width: 10em;
     height: 10em;
+    border-radius: 1em;
+    transition: all 0.3s;
     cursor: pointer;
     &:hover {
-      width: 12em;
-      height: 12em;
+      width: 11em;
+      height: 11em;
+    }
+    img {
+      width: 5em;
+    }
+    span {
+      font-weight: bold;
     }
   }
 }
@@ -53,9 +67,9 @@ h1 {
 
 .loading {
   margin: auto;
-  top: 20%;
-  left: 25%;
-  position: absolute;
+  top: 20vh;
+  left: 40vw;
+  position:fixed;
   img {
     width: 20em;
     height: 20em;
