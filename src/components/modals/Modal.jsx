@@ -1,5 +1,6 @@
 import React from 'react';
 import {createPortal} from 'react-dom';
+import SensorChart from '../charts/SensorChart.jsx';
 
 const Modal = ({setShowModal, sensorData}) => {
   const root = document.getElementById('root');
@@ -7,7 +8,7 @@ const Modal = ({setShowModal, sensorData}) => {
   return createPortal((
     <div className="modal" onClick={() => setShowModal(false)}>
      <div className="modal-ctr">
-       <canvas id="myChart"></canvas>
+       <SensorChart sensorData={sensorData}/>
      </div>
     </div>
   ), root

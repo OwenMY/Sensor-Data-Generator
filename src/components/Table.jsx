@@ -10,7 +10,7 @@ const Table = ({data}) => {
 
   const showModal = (e) => {
     e.persist();
-    const index = e.target.data;
+    const index = e.target.attributes[0].value;
     setSensorData(data.sensors?.[index]?.sensor_data);
     setShowModal(true);
   };
@@ -35,7 +35,7 @@ const Table = ({data}) => {
             <td>{sensor.sensor_unique_id}</td>
             <td>{sensor.sensor_type}</td>
             <td>
-              <span onClick={setShowModal} data={index}className="td-view">View</span>
+              <span onClick={showModal} value={index}className="td-view">View</span>
             </td>
           </tr>
         ))}
