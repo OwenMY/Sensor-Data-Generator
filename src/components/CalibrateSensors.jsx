@@ -11,7 +11,7 @@ const CalibrateSensors = () => {
       .then(res => setSensorCalData([res.data]))
       .catch(err => console.error(err))
   }, []);
-  console.log(sensorCalData)
+
   return !sensorCalData.length ? <Loading /> : (
     <div>
       <div>{sensorCalData[0].file_name}</div>

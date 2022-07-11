@@ -78,3 +78,24 @@ h1 {
   }
 }
 
+.search-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  a {
+    margin: auto 0;
+  }
+  button {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.form-ctr {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: solid white 1px;
+  border-radius: 10px;
+}
