@@ -1,3 +1,5 @@
+@import './components';
+
 $font-stack: Helvetica, sans-serif;
 $primary-color: #8B9A46;
 html {
@@ -99,3 +101,23 @@ h1 {
   border: solid white 1px;
   border-radius: 10px;
 }
+
+.cal-btn-ctr {
+  margin: 1em;
+  justify-content: center;
+  display: flex;
+  gap: 1em;
+  button {
+    font-weight: bold;
+    width: 10em;
+    height: 4em;
+    border-radius: 1em;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      width: 11em;
+      height: 5em;
+    }
+  }
+}
+

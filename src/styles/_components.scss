@@ -1,0 +1,37 @@
+/* tables */
+$border-table: 1px solid white;
+
+table {
+  border: $border-table;
+  border-collapse: collapse;
+  text-align: center;
+  margin: auto;
+}
+
+th, td {
+  border: $border-table;
+  padding: 1em;
+}
+
+.td-view {
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    color: yellow;
+  }
+}
+
+/* modals */
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

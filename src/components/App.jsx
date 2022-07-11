@@ -10,6 +10,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/calibrate-sensor" element={<CalibrateSensors />} />
+        <Route path="/calibrate-sensor/output" element={<div>Output</div>} />
         <Route path="/calibrate-base" element={<div>calibrate base</div>} />
         <Route path="/validate-system" element={<div>validate system</div>} />
         <Route path="/search" element={<Search />} />
