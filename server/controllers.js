@@ -5,8 +5,7 @@ const saveBaseCalData = require('./models/SaveBaseCalData.js');
 
 const getSensorCalData = (req, res) => {
   let data = genSensorCalData();
-  saveSensorCalData(data);
-  res.send(data);
+  saveSensorCalData(res, data);
 };
 
 const getSensorCalOutput = (req, res) => {

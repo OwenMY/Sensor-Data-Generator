@@ -1,9 +1,13 @@
 const pool = require('../../server/db.js');
 
-const saveSensorCalData = (data) => {
+const saveSensorCalData = (response, data) => {
   getFileNum()
     .then(res => saveFileName(res.rows?.[0]?.['id']))
-    .then(res => saveSensors(res.rows[0].file_name, data))
+    .then(res => {
+      data['file_name'] = res.rows[0].file_name;
+      response.send(data);
+      return saveSensors(res.rows[0].file_name, data)
+    })
     .catch(err => console.error(err));
 };
 
