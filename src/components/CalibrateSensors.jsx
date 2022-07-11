@@ -8,14 +8,14 @@ const CalibrateSensors = () => {
 
   useEffect(() => {
     axios.get('http://localhost:3000/SensorCalibrationData')
-      .then(res => setSensorCalData([]))
+      .then(res => setSensorCalData([res.data]))
       .catch(err => console.error(err))
   }, []);
 
   return !sensorCalData.length ? <Loading /> : (
-    <>
+    <div>
       <div>Cal</div>
-    </>
+    </div>
   )
 };
 
