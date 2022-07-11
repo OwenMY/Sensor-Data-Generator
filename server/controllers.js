@@ -1,5 +1,5 @@
-const genSensorCalData = require('../generators/SensorCalibrationData.js');
-const genBaseCalData = require('../generators/BaseStationCalibrationData.js');
+const genSensorCalData = require('./generators/SensorCalibrationData.js');
+const genBaseCalData = require('./generators/BaseStationCalibrationData.js');
 const saveSensorCalData = require('./models/SaveSensorCalData.js');
 const saveBaseCalData = require('./models/SaveBaseCalData.js');
 
