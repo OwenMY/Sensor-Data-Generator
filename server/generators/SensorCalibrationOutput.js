@@ -4,8 +4,9 @@ const generateNumber = (min, max) => {
 
 const genSensorOutput = (calFile) => {
   let newDate = new Date();
+  let stringDate = newDate.toISOString();
   let regexp = /(\d{4}-\d{2}-\d{2})/g;
-  let date = newDate.matchAll(regexp);
+  let date = stringDate.match(regexp);
 
   let output = {
     calibration_file: calFile.name,
