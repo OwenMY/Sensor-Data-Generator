@@ -2,7 +2,6 @@ import React from 'react';
 import {useState} from 'react';
 import {useLocation, Link} from 'react-router-dom';
 import axios from 'axios';
-import Loading from './../Loading.jsx'
 import CalOutputTable from './../tables/CalOutputTable.jsx';
 
 const CalibrateOutput = () => {
@@ -17,7 +16,6 @@ const CalibrateOutput = () => {
     let algorithm = 'v1.2.1';
 
     let sensors = data.sensors.map(sensor => {
-      console.log(sensor)
       return {
         sensor_unique_id: sensor.sensor_unique_id
       };
@@ -36,8 +34,8 @@ const CalibrateOutput = () => {
 
     axios.post('http://localhost:3000/SensorCalibrationOutput', body)
       .then(res => {
+        setOutput([res.data]);
         setIsLoading(false);
-        setOutput(res.data);
       })
       .catch(err => console.error(err));
   };
@@ -58,7 +56,7 @@ const CalibrateOutput = () => {
           <button>Return</button>
         </Link>
       </div>
-      {isLoading ? <Loading /> : <CalOutputTable output={output}/>}
+      <CalOutputTable output={output}/>
    </div>
   );
 };

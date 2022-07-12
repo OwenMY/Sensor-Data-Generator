@@ -6,6 +6,7 @@ table {
   border-collapse: collapse;
   text-align: center;
   margin: auto;
+  animation: fadeIn ease 1s;
 }
 
 th, td {
@@ -36,6 +37,12 @@ th, td {
 }
 
 .modal-ctr {
-  width: 45%;
   background-color: #282331;
+}
+
+/* Charts */
+canvas {
+  height: 300px;
+  width: 600px;
+  box-sizing: none;
 }
