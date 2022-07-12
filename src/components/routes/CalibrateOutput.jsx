@@ -17,8 +17,9 @@ const CalibrateOutput = () => {
     let algorithm = 'v1.2.1';
 
     let sensors = data.sensors.map(sensor => {
+      console.log(sensor)
       return {
-        sensor_unqiue_id: sensor.sensor_unqiue_id
+        sensor_unique_id: sensor.sensor_unique_id
       };
     })
 
@@ -33,9 +34,12 @@ const CalibrateOutput = () => {
       sensors: sensors
     };
 
-    // axios.post('/', body)
-    //   .then(res => setOutput(res.data))
-    //   .catch(err => console.error(err));
+    axios.post('http://localhost:3000/SensorCalibrationOutput', body)
+      .then(res => {
+        setIsLoading(false);
+        setOutput(res.data);
+      })
+      .catch(err => console.error(err));
   };
 
   return (
