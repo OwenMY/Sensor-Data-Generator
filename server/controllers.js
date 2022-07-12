@@ -3,6 +3,7 @@ const genBaseCalData = require('./generators/BaseStationCalibrationData.js');
 const genSensorOutput = require('./generators/SensorCalibrationOutput.js');
 const saveSensorCalData = require('./models/SaveSensorCalData.js');
 const saveBaseCalData = require('./models/SaveBaseCalData.js');
+const saveSensorOutput = require('./models/SaveSensorOutput.js');
 
 const getSensorCalData = (req, res) => {
   let data = genSensorCalData();
@@ -11,7 +12,7 @@ const getSensorCalData = (req, res) => {
 
 const postSensorCalOutput = (req, res) => {
   let data = genSensorOutput(req.body);
-  console.log(data)
+  saveSensorOutput(data);
   res.send(data);
 };
 
