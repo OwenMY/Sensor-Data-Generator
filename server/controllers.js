@@ -9,7 +9,7 @@ const getSensorCalData = (req, res) => {
   saveSensorCalData(res, data);
 };
 
-const getSensorCalOutput = (req, res) => {
+const postSensorCalOutput = (req, res) => {
   let data = genSensorOutput(req.body);
 
   res.send(data);
@@ -33,6 +33,6 @@ module.exports = {
   getBaseCalData,
   getPerformanceEvalOutput,
   getSensorCalData,
-  getSensorCalOutput,
+  postSensorCalOutput,
   getSearchQuery
 };

@@ -6,7 +6,7 @@ router.get('/SensorCalibrationData', controllers.getSensorCalData);
 
 router.get('/BaseCalibrationData', controllers.getBaseCalData);
 
-router.get('/SensorCalibrationOutput', controllers.getSensorCalOutput);
+router.post('/SensorCalibrationOutput', controllers.postSensorCalOutput);
 
 router.get('/PerformanceEvalutionOutput', controllers.getPerformanceEvalOutput);
 
