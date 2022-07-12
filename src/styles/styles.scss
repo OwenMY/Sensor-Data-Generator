@@ -2,6 +2,7 @@
 
 $font-stack: Helvetica, sans-serif;
 $primary-color: #8B9A46;
+
 html {
   background-color: #0F0E0E;
 }
@@ -121,3 +122,15 @@ h1 {
   }
 }
 
+.alg-ctr {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  top: 20vh;
+  margin: auto;
+  width: 15em;
+  button {
+    width: 5em;
+    cursor: pointer;
+  }
+}

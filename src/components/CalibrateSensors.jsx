@@ -19,7 +19,7 @@ const CalibrateSensors = () => {
       <h1>Sensor Statistics</h1>
       <Table data={data[0]}/>
       <div className="cal-btn-ctr">
-        <Link to="/calibrate-sensor/output">
+        <Link to="/calibrate-sensor/output" state={data[0]}>
           <button className="sc-btn">Generate Output</button>
         </Link>
         <Link to="/">

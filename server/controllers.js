@@ -11,6 +11,8 @@ const getSensorCalData = (req, res) => {
 
 const getSensorCalOutput = (req, res) => {
   let data = genSensorOutput(req.body);
+
+  res.send(data);
 };
 
 const getBaseCalData = (req, res) => {

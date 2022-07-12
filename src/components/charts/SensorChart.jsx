@@ -2,22 +2,11 @@ import React from 'react';
 import 'chart.js/auto';
 import {Chart} from 'react-chartjs-2';
 import getAxisData from '../utils/getAxisData.js';
-
-const labels = [
-  '1000',
-  '2000',
-  '3000',
-  '4000',
-  '5000',
-  '6000',
-  '7000',
-  '8000',
-  '9000',
-  '10000'
-];
+import getLabels from '../utils/getLabels.js';
 
 const SensorChart = ({sensorData}) => {
   const data = getAxisData(sensorData);
+  const labels = getLabels(sensorData);
 
   const chartData = {
     labels: labels,
