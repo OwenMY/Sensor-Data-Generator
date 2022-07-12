@@ -13,7 +13,7 @@ const sensors = [
   {sensor_unique_id: 12, sensor_type: 'mk012'}
 ];
 
-const baseStationIDs = ['b1', 'b2', 'b3', 'b4'];
+const baseStationIDs = ['bk001', 'bk0022', 'bk003', 'bk004'];
 
 const algorithms = ['v1.2.1', 'v1.2.2', 'v1.2.3', 'v1.2.4', 'v1.2.5'];
 
