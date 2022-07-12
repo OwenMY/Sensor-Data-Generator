@@ -11,7 +11,7 @@ const getSensorCalData = (req, res) => {
 
 const postSensorCalOutput = (req, res) => {
   let data = genSensorOutput(req.body);
-
+  console.log(data)
   res.send(data);
 };
 

@@ -30,7 +30,7 @@ const CalibrateOutput = () => {
 
     let body = {
       calibration_file: data.file_name,
-      algoritm_version: algorithm,
+      algorithm_version: algorithm,
       sensors: sensors
     };
 

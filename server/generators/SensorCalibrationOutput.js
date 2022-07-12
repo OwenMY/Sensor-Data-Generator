@@ -8,9 +8,8 @@ const genSensorOutput = (calFile) => {
   let regexp = /(\d{4}-\d{2}-\d{2})/g;
   let date = stringDate.match(regexp);
 
-  console.log(calFile);
   let output = {
-    calibration_file: calFile.file_name,
+    calibration_file: calFile.calibration_file,
     generation_date: date[0],
     algorithm_version: calFile.algorithm_version,
     sensors: formatSensors(calFile.sensors)
