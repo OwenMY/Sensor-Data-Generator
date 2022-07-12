@@ -45,6 +45,7 @@ const Table = ({data}) => {
         {!show ? null : <Modal
           setShowModal={setShowModal}
           sensorData={sensorData}
+          dataType={'Data'}
          />}
       </div>
     </div>
