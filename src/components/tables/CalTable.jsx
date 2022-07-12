@@ -20,9 +20,8 @@ const CalTable = ({data}) => {
     <table>
       <thead>
         <tr>
-          <th>{data.file_name}</th>
+          <th>{data?.file_name ? data.file_name : data.base_station_unique_id}</th>
           <th>Date: {data.calibration_date}</th>
-          {data?.base_station_unique_id ? <th>Base: {data.base_station_unique_id}</th> : null}
         </tr>
         <tr>
           <th>Sensor ID</th>
