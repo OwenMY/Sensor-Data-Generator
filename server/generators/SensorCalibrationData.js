@@ -38,9 +38,12 @@ const getSensors = (qty) => {
 
 const genSensorCalData = () => {
   const sensorQTY = generateNumber(4, 12);
+  let newDate = new Date();
+  let regexp = /(\d{4}-\d{2}-\d{2})/g;
+  let date = newDate.matchAll(regexp);
 
   const newData = {
-    calibration_date: new Date(),
+    calibration_date: date,
     sensors: getSensors(sensorQTY)
   };
 

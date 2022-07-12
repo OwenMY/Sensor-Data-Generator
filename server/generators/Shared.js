@@ -15,7 +15,10 @@ const sensors = [
 
 const baseStationIDs = ['b1', 'b2', 'b3', 'b4'];
 
+const algorithms = ['v1.2.1', 'v1.2.2', 'v1.2.3', 'v1.2.4', 'v1.2.5'];
+
 module.exports = {
   sensors,
-  baseStationIDs
+  baseStationIDs,
+  algorithms
 };
