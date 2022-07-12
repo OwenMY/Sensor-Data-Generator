@@ -1,9 +1,9 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from './Home.jsx';
-import CalibrateSensors from './CalibrateSensors.jsx';
-import Search from './Search.jsx';
-import CalibrateOutput from './CalibrateOutput.jsx';
+import Home from './routes/Home.jsx';
+import CalibrateSensors from './routes/CalibrateSensors.jsx';
+import Search from './routes/Search.jsx';
+import CalibrateOutput from './routes/CalibrateOutput.jsx';
 
 const App = () => {
   return (
