@@ -1,8 +1,4 @@
-const {sensors, baseStationIDs} = require('./Shared.js');
-
-const generateNumber = (min, max) => {
-  return Math.random() * (max - min) + min;
-};
+const {sensors, baseStationIDs, generateNumber} = require('./Shared.js');
 
 const getSensors = () => {
   let sensorsCopy = sensors.slice();

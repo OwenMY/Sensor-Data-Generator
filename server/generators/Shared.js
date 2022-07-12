@@ -17,8 +17,13 @@ const baseStationIDs = ['bk001', 'bk002', 'bk003', 'bk004'];
 
 const algorithms = ['v1.2.1', 'v1.2.2', 'v1.2.3', 'v1.2.4', 'v1.2.5'];
 
+const generateNumber = (min, max) => {
+  return Math.random() * (max - min) + min;
+};
+
 module.exports = {
   sensors,
   baseStationIDs,
-  algorithms
+  algorithms,
+  generateNumber
 };

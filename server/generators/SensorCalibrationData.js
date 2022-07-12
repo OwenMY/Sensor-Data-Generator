@@ -1,8 +1,4 @@
-const {sensors} = require('./Shared.js');
-
-const generateNumber = (min, max) => {
-  return Math.random() * (max - min) + min;
-};
+const {sensors, generateNumber} = require('./Shared.js');
 
 const generateSensorData = () => {
   let sampleSize = Math.floor(generateNumber(10000, 15000));

@@ -1,6 +1,4 @@
-const generateNumber = (min, max) => {
-  return Math.random() * (max - min) + min;
-};
+const {generateNumber} = require('./Shared.js');
 
 const genSensorOutput = (calFile) => {
   let newDate = new Date();
