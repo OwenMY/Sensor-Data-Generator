@@ -3,7 +3,7 @@ import React from 'react';
 const SearchForm = () => {
   return (
     <div className="search-ctr">
-     <label htmlFor="File Type">Choose File Type</label>
+     <label htmlFor="File Type">File Type</label>
       <select className="file-type" name="File Type">
         <option value="Type" selected>Choose Type</option>
         <option value="Sensor Calibration"> Sensor Calibration</option>
@@ -11,7 +11,7 @@ const SearchForm = () => {
         <option value="Base Calibration">Base Calibration</option>
         <option value="Performance Validation">Performance Validation</option>
       </select>
-      <label htmlFor="Base Station">Choose Base Station</label>
+      <label htmlFor="Base Station">Base Station</label>
       <select className="base-station" name="Base Station">
         <option value="Choose Base Station" selected>Base Station</option>
         <option value="BK001">BK001</option>
@@ -19,7 +19,7 @@ const SearchForm = () => {
         <option value="BK003">BK003</option>
         <option value="BK004">BK004</option>
       </select>
-      <label htmlFor="Sensor(s)">Choose Sensor</label>
+      <label htmlFor="Sensor(s)">Sensor</label>
       <select className="sensors" name="Sensor(s)">
         <option value="Choose Sensors" selected>Choose Sensors</option>
         <option value="MK001">MK001</option>
@@ -35,7 +35,7 @@ const SearchForm = () => {
         <option value="MK011">MK011</option>
         <option value="MK012">MK012</option>
       </select>
-      <label htmlFor="Algorithm">Choose Algorithm</label>
+      <label htmlFor="Algorithm">Algorithm</label>
       <select className="algorithm" name="Algorithm">
         <option value="Choose Algorithm" selected>Choose Algorithm</option>
         <option value="v1.2.1">v1.2.1</option>
@@ -48,7 +48,6 @@ const SearchForm = () => {
       <input type="date" name="start date" min="2022-01-01" max="2023-12-31"></input>
       <label htmlFor="end date">End Date</label>
       <input type="date" name="end date" min="2022-01-01" max="2023-12-31"></input>
-      <button type="submit">Search</button>
     </div>
   );
 };

@@ -13,6 +13,7 @@ const Search = () => {
         </Link>
       </div>
         <SearchForm />
+        <button className="search-btn" type="submit">Search</button>
       <div className="results"></div>
     </div>
   );
