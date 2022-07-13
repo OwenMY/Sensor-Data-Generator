@@ -1,4 +1,4 @@
-const {sensors, baseStationIDs, generateNumber} = require('./Shared.js');
+const {sensors, baseStationIDs, generateNumber, generateDate} = require('./Shared.js');
 
 const getSensors = () => {
   let sensorsCopy = sensors.slice();
@@ -34,13 +34,9 @@ const generateSensorData = () => {
 
 const genBaseCalData = () => {
   let randomIndex = Math.floor(generateNumber(1, 4));
-  let newDate = new Date();
-  let stringDate = newDate.toISOString();
-  let regexp = /(\d{4}-\d{2}-\d{2})/g;
-  let date = stringDate.match(regexp);
 
   let newData = {
-    calibration_date: date[0],
+    calibration_date: generateDate(),
     base_station_unique_id: baseStationIDs[randomIndex],
     sensors: getSensors()
   };

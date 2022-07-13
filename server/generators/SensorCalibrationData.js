@@ -1,4 +1,4 @@
-const {sensors, generateNumber} = require('./Shared.js');
+const {sensors, generateNumber, generateDate} = require('./Shared.js');
 
 const generateSensorData = () => {
   let sampleSize = Math.floor(generateNumber(10000, 15000));
@@ -34,13 +34,9 @@ const getSensors = (qty) => {
 
 const genSensorCalData = () => {
   const sensorQTY = generateNumber(4, 12);
-  let newDate = new Date();
-  let stringDate = newDate.toISOString();
-  let regexp = /(\d{4}-\d{2}-\d{2})/g;
-  let date = stringDate.match(regexp);
 
   const newData = {
-    calibration_date: date[0],
+    calibration_date: generateDate(),
     sensors: getSensors(sensorQTY)
   };
 

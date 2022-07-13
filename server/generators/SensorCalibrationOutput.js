@@ -1,14 +1,9 @@
-const {generateNumber} = require('./Shared.js');
+const {generateNumber, generateDate} = require('./Shared.js');
 
 const genSensorOutput = (calFile) => {
-  let newDate = new Date();
-  let stringDate = newDate.toISOString();
-  let regexp = /(\d{4}-\d{2}-\d{2})/g;
-  let date = stringDate.match(regexp);
-
   let output = {
     calibration_file: calFile.calibration_file,
-    generation_date: date[0],
+    generation_date: generateDate(),
     algorithm_version: calFile.algorithm_version,
     sensors: formatSensors(calFile.sensors)
   };
