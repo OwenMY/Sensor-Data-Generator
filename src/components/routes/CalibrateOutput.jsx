@@ -32,7 +32,7 @@ const CalibrateOutput = () => {
       sensors: sensors
     };
 
-    axios.post('http://localhost:3000/SensorCalibrationOutput', body)
+    axios.post('http://localhost:3000/sensor-calibration-output', body)
       .then(res => {
         setOutput([res.data]);
         setIsLoading(false);
