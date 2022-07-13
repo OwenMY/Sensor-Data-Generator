@@ -13,12 +13,12 @@ const genValOutput = () => {
 };
 
 const genAlgorithm = () => {
-  const randomIndex = generateNumber(0, 4);
+  const randomIndex = Math.round(generateNumber(0, 4));
   return algorithms[randomIndex];
 };
 
 const genBaseStationId = () => {
-  const randomIndex = generateNumber(0, 3);
+  const randomIndex = Math.round(generateNumber(0, 3));
   return baseStationIDs[randomIndex];
 }
 

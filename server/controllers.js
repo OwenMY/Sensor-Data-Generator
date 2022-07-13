@@ -5,6 +5,7 @@ const genValOutput = require('./generators/ValidateOutput.js');
 const saveSensorCalData = require('./models/SaveSensorCalData.js');
 const saveBaseCalData = require('./models/SaveBaseCalData.js');
 const saveSensorOutput = require('./models/SaveSensorOutput.js');
+const saveValidationOutput = require('./models/SaveValidationOutput.js');
 
 const getSensorCalData = (req, res) => {
   let data = genSensorCalData();
@@ -25,7 +26,7 @@ const getBaseCalData = (req, res) => {
 
 const getPerformanceEvalOutput = (req, res) => {
   let data = genValOutput();
-
+  saveValidationOutput(data);
   res.send(data);
 };
 
