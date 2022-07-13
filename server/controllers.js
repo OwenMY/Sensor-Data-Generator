@@ -1,6 +1,7 @@
 const genSensorCalData = require('./generators/SensorCalibrationData.js');
 const genBaseCalData = require('./generators/BaseStationCalibrationData.js');
 const genSensorOutput = require('./generators/SensorCalibrationOutput.js');
+const genValOutput = require('./generators/ValidateOutput.js');
 const saveSensorCalData = require('./models/SaveSensorCalData.js');
 const saveBaseCalData = require('./models/SaveBaseCalData.js');
 const saveSensorOutput = require('./models/SaveSensorOutput.js');
@@ -23,7 +24,9 @@ const getBaseCalData = (req, res) => {
 };
 
 const getPerformanceEvalOutput = (req, res) => {
-  //To-Do
+  let data = genValOutput();
+
+  res.send(data);
 };
 
 const getSearchQuery = (req, res) => {
