@@ -1,5 +1,6 @@
 /* tables */
 $border: 1px solid white;
+$gradient: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
 $bg: #302a32;
 
 table {
@@ -82,13 +83,30 @@ canvas {
 
 .search-ctr {
   display: grid;
-  grid-template-columns: 5em 10em 7em 10em;
+  grid-template-columns: 15% 30% 15% 30%;
   font-weight: bold;
-  padding: 2.5em;
+  padding: 1em;
   gap: 1em;
   border: $border;
   select {
-    max-width: 15em;
+    border-radius: 1em;
+    font-style: italic;
+    text-align: center;
+    width: 13.5em;
+    cursor: pointer;
+    &:hover {
+      background-image: $gradient;
+    }
+  }
+  input {
+    border-radius: 1em;
+    font-style: italic;
+    text-align: center;
+    width: 13.3em;
+    cursor: pointer;
+    &:hover {
+      background-image: $gradient;
+    }
   }
   button {
     width: 5em;
@@ -98,7 +116,7 @@ canvas {
     font-weight: bold;
     transition: all 0.5s ease;
     &:hover {
-      background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+      background-image: $gradient;
     }
   }
 }
@@ -112,6 +130,15 @@ canvas {
   transition: all .3s;
   cursor: pointer;
   &:hover {
-    background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+    background-image: $gradient;
+  }
+}
+
+.custom-input {
+  height: 1.2em;
+  width: 13em;
+  cursor: pointer;
+  &::placeholder {
+    color: black;
   }
 }

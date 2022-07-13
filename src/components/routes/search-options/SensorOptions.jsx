@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { Component } from "react";
+import {useState} from 'react';
 
-const SensorOptions = () => {
+const SensorOptions = ({dispatch}) => {
   return (
     <>
       <label htmlFor="Sensor(s)">Sensor</label>
-      <select className="sensors" name="Sensor(s)">
-        <option value="Choose Sensors" selected>Choose Sensors</option>
+      <select
+        onChange={(e) => dispatch({type: 'sensor', payload: e.target.value})}
+        className="dropdown"
+        name="Sensor(s)"
+      >
+        <option value="Choose Sensors" defaultValue>Choose Sensors</option>
         <option value="MK001">MK001</option>
         <option value="MK002">MK002</option>
         <option value="MK003">MK003</option>
