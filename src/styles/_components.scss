@@ -1,8 +1,9 @@
 /* tables */
-$border-table: 1px solid white;
+$border: 1px solid white;
+$bg: #302a32;
 
 table {
-  border: $border-table;
+  border: $border;
   border-collapse: collapse;
   text-align: center;
   margin: auto;
@@ -10,16 +11,20 @@ table {
 }
 
 th, td {
-  border: $border-table;
-  padding: 1em;
+  border-bottom: $border;
+  border-top: $border;
+  padding: .7em;
 }
 
+tr:nth-child(even) {background-color: #3e1b3e;}
+
 .td-view {
-  text-decoration: underline;
+  text-decoration: none;
   font-weight: bold;
   cursor: pointer;
+  transition: all .3s ease;
   &:hover {
-    color: #FFFF00;
+    color: #9295b5;
   }
 }
 
@@ -37,7 +42,13 @@ th, td {
 }
 
 .modal-ctr {
-  background-color: #282331;
+  background-color: #F7E7FB;
+  table {
+    background-color: #31293F;
+  }
+  thead {
+    background-color: #3e1b3e;
+  }
 }
 
 /* Charts */
@@ -45,4 +56,48 @@ canvas {
   height: 300px;
   width: 600px;
   box-sizing: none;
+}
+
+/* search */
+.search-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  a {
+    margin: auto 0;
+  }
+  button {
+    width: 5em;
+    height: 2em;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: all .3s;
+    &:hover {
+      width: 5.5em;
+      height: 2.5em;
+      cursor: pointer;
+    }
+  }
+}
+
+.search-ctr {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  flex-direction: column;
+  gap: 10px;
+  border: $border;
+  select {
+    max-width: 15em;
+  }
+  button {
+    width: 5em;
+    height: 2em;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    &:hover {
+      background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+    }
+  }
 }

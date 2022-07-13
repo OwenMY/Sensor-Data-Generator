@@ -14,20 +14,20 @@ const SensorChart = ({sensorData}) => {
     datasets: [
       {
         label: 'X Axis',
-        backgroundColor: '#00FF00',
-        borderColor: '#00FF00',
+        backgroundColor: '#7a5195',
+        borderColor: '#7a5195',
         data: data.x,
       },
       {
         label: 'Y Axis',
-        backgroundColor: '#FFFF00',
-        borderColor: '#FFFF00',
+        backgroundColor: '#58508d',
+        borderColor: '#58508d',
         data: data.y,
       },
       {
         label: 'Z Axis',
-        backgroundColor: '#ff0000',
-        borderColor: '#ff0000',
+        backgroundColor: '#003f5c',
+        borderColor: '#003f5c',
         data: data.z,
       }
     ]

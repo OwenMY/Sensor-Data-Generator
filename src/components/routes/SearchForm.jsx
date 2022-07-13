@@ -2,8 +2,8 @@ import React from 'react';
 
 const SearchForm = () => {
   return (
-    <div className="form-ctr">
-     <label htmlFor="File Type">Choose File Type :</label>
+    <div className="search-ctr">
+     <label htmlFor="File Type">Choose File Type</label>
       <select className="file-type" name="File Type">
         <option value="Type" selected>Choose Type</option>
         <option value="Sensor Calibration"> Sensor Calibration</option>
@@ -11,23 +11,43 @@ const SearchForm = () => {
         <option value="Base Calibration">Base Calibration</option>
         <option value="Performance Validation">Performance Validation</option>
       </select>
-      <label htmlFor="Base Station">Choose Base Station :</label>
+      <label htmlFor="Base Station">Choose Base Station</label>
       <select className="base-station" name="Base Station">
         <option value="Choose Base Station" selected>Base Station</option>
-        <option value="b1">b1</option>
-        <option value="b2">b2</option>
-        <option value="b3">b3</option>
-        <option value="b4">b4</option>
+        <option value="BK001">BK001</option>
+        <option value="BK002">BK002</option>
+        <option value="BK003">BK003</option>
+        <option value="BK004">BK004</option>
       </select>
-      <label htmlFor="Sensor">Choose Sensor:</label>
+      <label htmlFor="Sensor(s)">Choose Sensor</label>
       <select className="sensors" name="Sensor(s)">
         <option value="Choose Sensors" selected>Choose Sensors</option>
-        <option value="b1">123</option>
-        <option value="b2">123</option>
-        <option value="b3">1234</option>
-        <option value="b4">12112</option>
+        <option value="MK001">MK001</option>
+        <option value="MK002">MK002</option>
+        <option value="MK003">MK003</option>
+        <option value="MK004">MK004</option>
+        <option value="MK005">MK005</option>
+        <option value="MK006">MK006</option>
+        <option value="MK007">MK007</option>
+        <option value="MK008">MK008</option>
+        <option value="MK009">MK009</option>
+        <option value="MK010">MK010</option>
+        <option value="MK011">MK011</option>
+        <option value="MK012">MK012</option>
       </select>
-      <input type="date" name="poop start" min="2022-01-01" max="2023-12-31"></input>
+      <label htmlFor="Algorithm">Choose Algorithm</label>
+      <select className="algorithm" name="Algorithm">
+        <option value="Choose Algorithm" selected>Choose Algorithm</option>
+        <option value="v1.2.1">v1.2.1</option>
+        <option value="v1.2.2">v1.2.2</option>
+        <option value="v1.2.3">v1.2.3</option>
+        <option value="v1.2.4">v1.2.4</option>
+        <option value="v1.2.5">v1.2.5</option>
+      </select>
+      <label htmlFor="start date">Start Date</label>
+      <input type="date" name="start date" min="2022-01-01" max="2023-12-31"></input>
+      <label htmlFor="end date">End Date</label>
+      <input type="date" name="end date" min="2022-01-01" max="2023-12-31"></input>
       <button type="submit">Search</button>
     </div>
   );

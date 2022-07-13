@@ -1,10 +1,14 @@
 @import './components';
 
 $font-stack: Helvetica, sans-serif;
-$primary-color: #8B9A46;
+$primary-color: #D3D9E9;
 
 html {
-  background-color: #0F0E0E;
+  background-color: #31293F;
+}
+
+button {
+  background-color: $primary-color;
 }
 
 body {
@@ -81,28 +85,6 @@ h1 {
   }
 }
 
-.search-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  a {
-    margin: auto 0;
-  }
-  button {
-    &:hover {
-      cursor: pointer;
-    }
-  }
-}
-
-.form-ctr {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  border: solid white 1px;
-  border-radius: 10px;
-}
-
 .cal-btn-ctr {
   margin: 1em;
   justify-content: center;
@@ -116,6 +98,7 @@ h1 {
     transition: all 0.3s;
     cursor: pointer;
     &:hover {
+      position: relative;
       width: 11em;
       height: 5em;
     }
@@ -133,5 +116,9 @@ h1 {
     width: 8em;
     cursor: pointer;
     font-weight: bold;
+    border-radius: 5px;
+    &:hover {
+      background-image: linear-gradient(315deg, #f8ceec 0%, #a88beb 74%);
+    }
   }
 }

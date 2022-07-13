@@ -9,9 +9,9 @@ const generateSensorData = () => {
 
     let coord = {
       time: ('' + i).padStart(5, '0'),
-      x: Number(g(0, 25).toFixed(5)),
-      y: Number(g(0, 25).toFixed(5)),
-      z: Number(g(0, 25).toFixed(5))
+      x: Number(g(0, 3).toFixed(3)),
+      y: Number(g(0, 3).toFixed(3)),
+      z: Number(g(0, 3).toFixed(3))
     };
 
     timeSeries.push(coord);
