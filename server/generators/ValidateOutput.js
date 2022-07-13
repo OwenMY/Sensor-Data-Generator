@@ -45,7 +45,7 @@ const genSensorData = () => {
 
  const genAccuracy = () => {
   const float = generateNumber(.2, 1.1).toFixed(1);
-  return float == 1.1 ? 5 : float;
+  return float == 1.1 ? '5.0' : float;
  };
 
  const genPrecision = () => {

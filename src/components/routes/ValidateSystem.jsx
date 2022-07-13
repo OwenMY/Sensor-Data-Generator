@@ -3,21 +3,21 @@ import {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import Loading from './../Loading.jsx';
-import CalTable from './../tables/CalTable.jsx';
+import ValidationTable from './../tables/ValidationTable.jsx';
 
-const CalibrateBase = () => {
-  const [data, setBaseCalData] = useState([]);
+const ValidateSystem = () => {
+  const [data, setValidationData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/base-calibration-data')
-      .then(res => setBaseCalData([res.data]))
+    axios.get('http://localhost:3000/performance-evaluation-output')
+      .then(res => setValidationData([res.data]))
       .catch(err => console.error(err))
   }, []);
 
   return !data.length ? <Loading /> : (
     <div>
-      <h1>Base Statistics</h1>
-      <CalTable data={data[0]}/>
+      <h1>Validation Data</h1>
+      <ValidationTable data={data[0]}/>
       <div className="cal-btn-ctr">
         <Link to="/">
           <button className="sc-btn">Return Home</button>
@@ -27,4 +27,4 @@ const CalibrateBase = () => {
   );
 };
 
-export default CalibrateBase;
+export default ValidateSystem;
