@@ -4,7 +4,7 @@ import React from 'react';
 const PrecisionOptions = ({dispatch}) => {
   return (
     <>
-      <label htmlFor="Precision">Precision Limits</label>
+      <label htmlFor="Precision">Precision</label>
       <select
         onChange={(e) => dispatch({type: 'precision', payload: e.target.value})}
         className="dropdown"
