@@ -1,6 +1,6 @@
 /* eslint-disable no-case-declarations */
 import React from 'react';
-import {useReducer} from 'react';
+import {useReducer, useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import SearchForm from './SearchForm.jsx';
@@ -40,7 +40,18 @@ const reducer = (state, action) => {
 
 const Search = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  console.log(state)
+  const [searchResults, setSearchResults] = useState([]);
+
+  const handleSubmit = (e) => {
+    if (!state.fileType) return;
+
+    e.preventDefault();
+    console.log('poop')
+    // axios.post('http://localhost:3000/search', state)
+    //   .then(res => setSearchResults(res.date))
+    //   .catch(err => console.error(err));
+  };
+
   return (
     <div className="search">
       <div className="search-header">
@@ -50,7 +61,7 @@ const Search = () => {
         </Link>
       </div>
         <SearchForm dispatch={dispatch} state={state} />
-        <button className="search-btn" type="submit">Search</button>
+        <button onClick={handleSubmit} className="search-btn">Search</button>
       <div className="results"></div>
     </div>
   );
