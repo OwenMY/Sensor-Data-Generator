@@ -12,6 +12,8 @@ const initialState = {
   algorithm: null,
   base: null,
   options: [],
+  precision: null,
+  accuracy: null
 };
 
 const reducer = (state, action) => {
@@ -27,6 +29,10 @@ const reducer = (state, action) => {
     case 'date':
       let dateSet = action.payload.map(date => date.format());
       return {...state, dates: dateSet };
+    case 'precision':
+      return {...state, precision: action.payload};
+    case 'accuracy':
+      return {...state, accuracy: action.payload};
     default:
       return {...state}
   }
