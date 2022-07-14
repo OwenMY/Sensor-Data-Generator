@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 const AccuracyOptions = ({dispatch}) => {
@@ -20,7 +21,7 @@ const AccuracyOptions = ({dispatch}) => {
         <option value="< 0.8">{'< 0.8'}</option>
         <option value="< 0.9">{'< 0.9'}</option>
         <option value="< 1.0">{'< 1.0'}</option>
-        <option value="outliers">{'outliers'}</option>
+        <option value="Outliers">{'outliers'}</option>
       </select>
     </>
   );

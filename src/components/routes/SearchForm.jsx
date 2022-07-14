@@ -7,6 +7,7 @@ import DateOptions from './search-options/DateOptions.jsx';
 import FileOptions from './search-options/FileOptions.jsx';
 import SensorOptions from './search-options/SensorOptions.jsx';
 import PrecisionOptions from './search-options/PrecisionOptions.jsx';
+import AccuracyOptions from './search-options/AccuracyOptions.jsx';
 
 const SearchForm = ({dispatch, state}) => {
   const [options, setOptions] = useState([]);
@@ -38,7 +39,8 @@ const SearchForm = ({dispatch, state}) => {
           (<BaseOptions key="PVO2" dispatch={dispatch}/>),
           (<AlgorithmsOptions key="PV03" dispatch={dispatch}/>),
           (<DateOptions key="PVO4" dispatch={dispatch} state={state}/>),
-          (<PrecisionOptions key="PV05" dispatch={dispatch} state={state}/>)
+          (<PrecisionOptions key="PV05" dispatch={dispatch} state={state}/>),
+          (<AccuracyOptions key="PV06" dispatch={dispatch} state={state}/>)
         ]);
         break;
       default:
