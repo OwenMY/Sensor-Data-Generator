@@ -4,6 +4,8 @@ import axios from 'axios';
 import {createPortal} from 'react-dom';
 import THeadCells from '../tables/search-sensor-table-cells/THeadCells.jsx';
 import TBodyCells from '../tables/search-sensor-table-cells/TBodyCells.jsx';
+import SearchDataModal from './SearchDataModal.jsx';
+import LoadingModal from './LoadingModal.jsx';
 
 const SearchTableModal = ({setShowModal, sensorData}) => {
   const root = document.getElementById('root');
@@ -23,15 +25,16 @@ const SearchTableModal = ({setShowModal, sensorData}) => {
     console.log(params);
     axios.get('http://localhost:3000/search-sensor-data', {params: params})
       .then(res => {
-        // setIsLoading(false);
+        setIsLoading(false);
         console.log(res.data);
-        // setSensorFileData(res.data);
-        // setShowDataModal(true);
+        setSensorFileData(res.data);
+        setShowDataModal(true);
       })
       .catch(err => console.error(err));
   };
 
   return createPortal((
+    <>
     <div className="modal" onClick={() => setShowModal(false)}>
      <div className="modal-ctr" onClick={(e) => e.stopPropagation()}>
       <table>
@@ -44,6 +47,16 @@ const SearchTableModal = ({setShowModal, sensorData}) => {
       </table>
      </div>
     </div>
+    {
+      isLoading ? <LoadingModal /> : null
+    }
+    {
+      !show ? null : <SearchDataModal
+      setShowDataModal={setShowDataModal}
+      sensorFileData={sensorFileData}
+      />
+    }
+    </>
   ), root
 )};
 

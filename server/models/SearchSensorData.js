@@ -23,7 +23,7 @@ const searchSensorData = (data) => {
       SELECT
         ARRAY_AGG(
           JSONB_BUILD_OBJECT(
-            'calibtion_parameters', sod.calibration_parameters
+            'calibration_parameters', sod.calibration_parameters
           )
         ) FROM
         sensor_output_data AS sod
