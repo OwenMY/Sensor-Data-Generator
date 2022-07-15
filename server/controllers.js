@@ -8,6 +8,7 @@ const saveSensorOutput = require('./models/SaveSensorOutput.js');
 const saveValidationOutput = require('./models/SaveValidationOutput.js');
 const searchRoutes = require('./models/SearchRouter.js');
 const searchSensorLists = require('./models/SearchSensorLists.js');
+const searchSensorData = require('./models/SearchSensorData.js');
 
 const getSensorCalData = (req, res) => {
   let data = genSensorCalData();
@@ -49,8 +50,11 @@ const getSearchSensors = (req, res) => {
 };
 
 const getSearchSensorData = (req, res) => {
-  console.log(req.query)
-  res.send('poop')
+  searchSensorData(req.query)
+  .then(result => {
+    res.send(result.rows[0].array_agg || []);
+  })
+  .catch(err => console.error(err));
 };
 
 module.exports = {

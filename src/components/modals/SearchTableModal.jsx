@@ -1,0 +1,50 @@
+import React from 'react';
+import {useState} from 'react';
+import axios from 'axios';
+import {createPortal} from 'react-dom';
+import THeadCells from '../tables/search-sensor-table-cells/THeadCells.jsx';
+import TBodyCells from '../tables/search-sensor-table-cells/TBodyCells.jsx';
+
+const SearchTableModal = ({setShowModal, sensorData}) => {
+  const root = document.getElementById('root');
+
+  const [show, setShowDataModal] = useState(false);
+  const [sensorFileData, setSensorFileData] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleView = (e, cellData) => {
+    setIsLoading(true);
+    const index = e.target.attributes.data.value;
+    const params = cellData[Number(index)];
+    params['fileType'] = sensorData[0].fileType;
+    params['file_name'] = sensorData[0].file_name;
+
+    console.log(sensorData)
+    console.log(params);
+    axios.get('http://localhost:3000/search-sensor-data', {params: params})
+      .then(res => {
+        // setIsLoading(false);
+        console.log(res.data);
+        // setSensorFileData(res.data);
+        // setShowDataModal(true);
+      })
+      .catch(err => console.error(err));
+  };
+
+  return createPortal((
+    <div className="modal" onClick={() => setShowModal(false)}>
+     <div className="modal-ctr" onClick={(e) => e.stopPropagation()}>
+      <table>
+        <thead>
+          <THeadCells sensorData={sensorData}/>
+        </thead>
+        <tbody>
+          <TBodyCells sensorData={sensorData} handleView={handleView}/>
+        </tbody>
+      </table>
+     </div>
+    </div>
+  ), root
+)};
+
+export default SearchTableModal;

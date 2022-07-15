@@ -21,7 +21,7 @@ const searchSensorLists = (data) => {
       SELECT
         ARRAY_AGG(
           JSONB_BUILD_OBJECT(
-            'sensor_unique_id', sod.sensor_unique_id,
+            'sensor_unique_id', sod.sensor_unique_id
           )
         ) FROM
         sensor_output_data AS sod WHERE file_name = $1;
