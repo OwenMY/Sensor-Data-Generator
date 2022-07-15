@@ -38,12 +38,13 @@ const fileNamesOnlyQuery = `
   SELECT
    ARRAY_AGG(
       DISTINCT JSONB_BUILD_OBJECT(
+        'file_name', file_name,
         'calibration_file', calibration_file,
         'generation_date', generation_date,
         'algorithm_version', algorithm_version
       )
     )
-  FROM sensor_output_data;
+  FROM sensor_output_data
 `;
 
 const queryCalOutputFiles = (data) => {
@@ -53,9 +54,10 @@ const queryCalOutputFiles = (data) => {
     SELECT DISTINCT
       ARRAY_AGG(
         DISTINCT JSONB_BUILD_OBJECT(
+          'file_name', sod.file_name,
           'calibration_file', sod.calibration_file,
           'generation_date', sod.generation_date,
-          'algorithm_version', algorithm_version
+          'algorithm_version', sod.algorithm_version
         )
       )
     FROM output_filenames AS Out FULL JOIN sensor_output_data AS sod ON out.file_name = sod.calibration_file

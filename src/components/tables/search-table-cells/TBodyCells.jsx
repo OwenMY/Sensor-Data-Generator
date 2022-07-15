@@ -7,34 +7,34 @@ const TBodyCells = ({searchResults}) => {
 
   switch(fileType) {
     case 'Sensor Calibration':
-      return cellData.map((data, index) => (
-        <tr key={`SCBODY${index}`}>
+      return cellData.map((data) => (
+        <tr key={`SCBODY${data.file_name}`}>
           <td>{data.file_name}</td>
           <td>{data.calibration_date}</td>
           <td>View</td>
         </tr>
       ));
     case 'Sensor Calibration Output':
-      return cellData.map((data, index) => (
-        <tr key={`SOBODY${index}`}>
+      return cellData.map((data) => (
+        <tr key={`SOBODY${data.file_name}`}>
           <td>{data.file_name}</td>
+          <td>{data.calibration_file}</td>
           <td>{data.generation_date}</td>
           <td>{data.algorithm_version}</td>
-          <td>{data.calibration_date}</td>
           <td>View</td>
         </tr>
       ));
     case 'Base Calibration':
-      return cellData.map((data, index) => (
-        <tr key={`BCBODY${index}`}>
+      return cellData.map((data) => (
+        <tr key={`BCBODY${data.file_name}`}>
           <td>{data.file_name}</td>
           <td>{data.calibration_date}</td>
           <td>View</td>
         </tr>
       ));
     case 'Performance Validation':
-      return cellData.map((data, index) => (
-        <tr key={`PVBODY${index}`}>
+      return cellData.map((data) => (
+        <tr key={`PVBODY${data.file_name}`}>
           <td>{data.file_name}</td>
           <td>{data.validation_date}</td>
           <td>{data.algorithm_version}</td>
