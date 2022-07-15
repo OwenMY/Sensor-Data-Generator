@@ -21,7 +21,7 @@ const saveFileName = (fileNum = 0) => {
     RETURNING *
   `;
 
-  return pool.query(query, [fileNum + 1, `OCF${fileNum + 1}`])
+  return pool.query(query, [fileNum + 1, `VCF${fileNum + 1}`])
 };
 
 const saveOutput = (fileName, data) => {

@@ -37,7 +37,7 @@ const reducer = (state, action) => {
       return {...state, precision: action.payload};
     case 'accuracy':
       if (action?.payload?.includes('Choose')) return {...state, accuracy: null};
-      return {...state, accuracy: action.payload};
+      return action.payload === 'Outliers' ? {...state, accuracy: 5.0} : {...state, accuracy: action.payload};
     default:
       return {...state}
   }
