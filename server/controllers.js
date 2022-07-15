@@ -32,11 +32,18 @@ const getPerformanceEvalOutput = (req, res) => {
 };
 
 const getSearchQuery = (req, res) => {
-  console.log(req.query)
   searchRoutes(req.query)
     .then(result => {
       res.send(result.rows[0].array_agg || [])})
     .catch(err => console.error(err));
+};
+
+const getSearchSensors = (req, res) => {
+  //
+};
+
+const getSearchSensorData = (req, res) => {
+  //
 };
 
 module.exports = {
@@ -44,5 +51,7 @@ module.exports = {
   getPerformanceEvalOutput,
   getSensorCalData,
   postSensorCalOutput,
-  getSearchQuery
+  getSearchQuery,
+  getSearchSensors,
+  getSearchSensorData
 };

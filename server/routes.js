@@ -12,4 +12,6 @@ router.get('/performance-evaluation-output', controllers.getPerformanceEvalOutpu
 
 router.get('/search', controllers.getSearchQuery);
 
+router.get('/search-sensors', controllers.getSearchSensors);
+
 module.exports = router;
