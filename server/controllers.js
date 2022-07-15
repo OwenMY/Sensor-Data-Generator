@@ -7,7 +7,7 @@ const saveBaseCalData = require('./models/SaveBaseCalData.js');
 const saveSensorOutput = require('./models/SaveSensorOutput.js');
 const saveValidationOutput = require('./models/SaveValidationOutput.js');
 const searchRoutes = require('./models/SearchRouter.js');
-const searchSensorRoutes = require('./models/SearchSensorRouter.js');
+const searchSensorLists = require('./models/SearchSensorLists.js');
 
 const getSensorCalData = (req, res) => {
   let data = genSensorCalData();
@@ -41,8 +41,7 @@ const getSearchQuery = (req, res) => {
 };
 
 const getSearchSensors = (req, res) => {
-  console.log(req.query)
-  searchSensorRoutes(req.query)
+  searchSensorLists(req.query)
     .then(result => {
       res.send(result.rows[0].array_agg || []);
     })
