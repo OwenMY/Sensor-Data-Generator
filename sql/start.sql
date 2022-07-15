@@ -31,7 +31,8 @@ CREATE TABLE IF NOT EXISTS output_filenames (
 );
 
 CREATE TABLE IF NOT EXISTS sensor_output_data (
-  calibration_file VARCHAR(10) REFERENCES output_filenames (file_name),
+  file_name VARCHAR(10) REFERENCES output_filenames (file_name),
+  calibration_file VARCHAR(10),
   algorithm_version VARCHAR(10),
   generation_date DATE,
   sensor_unique_id INTEGER,

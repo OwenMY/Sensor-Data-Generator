@@ -27,12 +27,13 @@ const saveFileName = (fileNum = 0) => {
 const saveOutput = (fileName, output) => {
   const insertQuery = `
     INSERT INTO sensor_output_data(
+      file_name,
       calibration_file,
       algorithm_version,
       generation_date,
       sensor_unique_id,
       calibration_parameters
-    ) VALUES($1, $2, $3, $4, $5)
+    ) VALUES($1, $2, $3, $4, $5, $6)
   `;
 
   output.sensors.forEach(sensor => {
@@ -42,6 +43,7 @@ const saveOutput = (fileName, output) => {
       text: insertQuery,
       values: [
         fileName,
+        output.calibration_file,
         output.algorithm_version,
         output.generation_date,
         sensor.sensor_unique_id,
