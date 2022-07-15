@@ -35,7 +35,7 @@ const getSearchQuery = (req, res) => {
   console.log(req.query)
   searchRoutes(req.query)
     .then(result => {
-      res.send(result.rows[0].array_agg)})
+      res.send(result.rows[0].array_agg || [])})
     .catch(err => console.error(err));
 };
 

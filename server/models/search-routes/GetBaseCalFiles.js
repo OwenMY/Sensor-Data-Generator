@@ -60,7 +60,7 @@ const queryBaseCalFiles = (data) => {
   let params = [];
 
   if (data.hasOwnProperty('dates')) params.push(...data.dates);
-  if (data.hasOwnProperty('base')) params.push(data.sensor);
+  if (data.hasOwnProperty('base')) params.push(data.base);
   return !dollarSignQuery.length ? pool.query(query) : pool.query(query, params)
 };
 
