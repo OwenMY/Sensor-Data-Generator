@@ -4,7 +4,7 @@ import {createPortal} from 'react-dom';
 import SensorChart from '../charts/SensorChart.jsx';
 import CalSettingsTable from '../tables/CalSettingsTable.jsx';
 
-const SearchDataModal = ({setShowDataModal, sensorFileData, dataType}) => {
+const SearchDataModal = ({setShowDataModal, sensorFileData}) => {
   const root = document.getElementById('root');
   let sensorData = null;
 
@@ -13,8 +13,6 @@ const SearchDataModal = ({setShowDataModal, sensorFileData, dataType}) => {
   } else {
     sensorData = JSON.parse(sensorFileData[0].calibration_parameters);
   }
-
-  console.log(sensorData)
 
   return createPortal((
     <div className="modal" onClick={() => setShowDataModal(false)}>
