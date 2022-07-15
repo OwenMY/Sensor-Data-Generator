@@ -7,6 +7,7 @@ const saveBaseCalData = require('./models/SaveBaseCalData.js');
 const saveSensorOutput = require('./models/SaveSensorOutput.js');
 const saveValidationOutput = require('./models/SaveValidationOutput.js');
 const searchRoutes = require('./models/SearchRouter.js');
+const searchSensorRoutes = require('./models/SearchSensorRouter.js');
 
 const getSensorCalData = (req, res) => {
   let data = genSensorCalData();
@@ -34,16 +35,23 @@ const getPerformanceEvalOutput = (req, res) => {
 const getSearchQuery = (req, res) => {
   searchRoutes(req.query)
     .then(result => {
-      res.send(result.rows[0].array_agg || [])})
+      res.send(result.rows[0].array_agg || []);
+    })
     .catch(err => console.error(err));
 };
 
 const getSearchSensors = (req, res) => {
-  //
+  console.log(req.query)
+  searchSensorRoutes(req.query)
+    .then(result => {
+      res.send(result.rows[0].array_agg || []);
+    })
+    .catch(err => console.error(err));
 };
 
 const getSearchSensorData = (req, res) => {
-  //
+  console.log(req.query)
+  res.send('poop')
 };
 
 module.exports = {

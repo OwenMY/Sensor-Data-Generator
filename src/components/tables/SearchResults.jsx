@@ -11,10 +11,15 @@ const SearchResults = ({searchResults}) => {
 
   const handleView = (e) => {
     const index = e.target.attributes.data.value;
-    const params = searchResults[index + 1];
+    const params = searchResults[Number(index) + 1];
+    params['fileType'] = searchResults[0].fileType;
 
-    axios.get('http://localhost:3000/all-sensors', params)
-      .then(res => console.log(res.data))
+    axios.get('http://localhost:3000/search-sensors', {params: params})
+      .then(res => {
+        console.log(res.data);
+        setSensorData(res.data);
+        setShowModal(true);
+      })
       .catch(err => console.error(err));
   };
 

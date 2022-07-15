@@ -1,7 +1,6 @@
 /* eslint-disable no-prototype-builtins */
 const pool = require('../../../server/db.js');
-
-const dollars = ['$1', '$2', '$3'];
+const {dollars} = require('./Common.js');
 
 const getDollarSigns = (data) => {
   let result = '';

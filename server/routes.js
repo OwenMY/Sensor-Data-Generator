@@ -14,4 +14,6 @@ router.get('/search', controllers.getSearchQuery);
 
 router.get('/search-sensors', controllers.getSearchSensors);
 
+router.get('/search-sensor-data', controllers.getSearchSensorData);
+
 module.exports = router;
