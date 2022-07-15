@@ -82,8 +82,6 @@ const queryValidationFiles = (data) => {
 
   let params = [];
 
-  console.log(query);
-
   if (data.hasOwnProperty('dates')) params.push(...data.dates);
   if (data.hasOwnProperty('sensor')) params.push(convertSensors(data.sensor));
   if (data.hasOwnProperty('algorithm')) params.push(data.algorithm);
