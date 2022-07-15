@@ -1,0 +1,51 @@
+/* eslint-disable react/prop-types */
+import React from 'react';
+
+const TheadCells = ({searchResults}) => {
+  const fileType = searchResults[0].fileType;
+
+  switch(fileType) {
+    case 'Sensor Calibration':
+      return [(
+        <tr key="SCHEADER">
+          <th>File Name</th>
+          <th>Calibration Date</th>
+          <th>Sensors</th>
+        </tr>
+      )];
+    case 'Sensor Calibration Output':
+      return [(
+        <tr key="SOHEADER">
+          <th>File Name</th>
+          <th>Calibration File</th>
+          <th>Generation Date</th>
+          <th>Algorithm Version</th>
+          <th>Calibration Settings</th>
+        </tr>
+      )];
+    case 'Base Calibration':
+      return [(
+        <tr key="BCHEADER">
+          <th>File Name</th>
+          <th>Calibration File</th>
+          <th>Sensors</th>
+        </tr>
+      )];
+    case 'Performance Validation':
+      return [(
+        <>
+        <tr key="PVHEADER">
+          <th>File Name</th>
+          <th>Validation Date</th>
+          <th>Algorithm Version</th>
+          <th>Base Station</th>
+          <th>Sensors</th>
+        </tr>
+        </>
+      )];
+    default:
+      return null;
+  }
+};
+
+export default TheadCells;

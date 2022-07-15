@@ -4,6 +4,7 @@ import {useReducer, useState} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import SearchForm from './SearchForm.jsx';
+import SearchResults from '../tables/SearchResults.jsx';
 
 const initialState = {
   fileType: null,
@@ -18,6 +19,7 @@ const initialState = {
 const reducer = (state, action) => {
   switch (action.type) {
     case 'file type':
+      if (action?.payload?.includes('Choose')) return {...state, fileType: null};
       return {...state, fileType: action.payload};
     case 'algorithm':
       if (action?.payload?.includes('Choose')) return {...state, algorithm: null};
@@ -51,7 +53,7 @@ const Search = () => {
     if (!state.fileType) return;
 
     axios.get('http://localhost:3000/search', {params: state})
-      .then(res => console.log(res.data))
+      .then(res => setSearchResults([{fileType: state.fileType}, ...res.data]))
       .catch(err => console.error(err));
   };
 
@@ -65,7 +67,9 @@ const Search = () => {
       </div>
         <SearchForm dispatch={dispatch} state={state} />
         <button onClick={handleSubmit} className="search-btn">Search</button>
-      <div className="results"></div>
+      <div className="results">
+        {searchResults.length <= 1 ? null :<SearchResults searchResults={searchResults}/>}
+      </div>
     </div>
   );
 };

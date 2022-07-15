@@ -59,7 +59,7 @@ const fileNamesOnlyQuery = `
         'base_station_unique_id', base_station_unique_id
       )
     )
-  FROM validate_filenames;
+  FROM validate_system_data;
 `;
 
 const queryValidationFiles = (data) => {

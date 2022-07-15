@@ -10,7 +10,7 @@ const FileOptions = ({dispatch}) => {
         className="dropdown"
         name="File Type"
       >
-        <option value="Type" defaultValue>Choose Type</option>
+        <option value="Choose Type" defaultValue>Choose Type</option>
         <option value="Sensor Calibration"> Sensor Calibration</option>
         <option value="Sensor Calibration Output">Sensor Calibration Output</option>
         <option value="Base Calibration">Base Calibration</option>
