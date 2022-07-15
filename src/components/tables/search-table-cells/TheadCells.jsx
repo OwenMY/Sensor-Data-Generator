@@ -3,11 +3,12 @@ import React from 'react';
 
 const TheadCells = ({searchResults}) => {
   const fileType = searchResults[0].fileType;
+  searchResults['poop'] = 1
 
   switch(fileType) {
     case 'Sensor Calibration':
       return [(
-        <tr key="SCHEADER">
+        <tr key="SCHEADER" className="tr-th-row">
           <th>File Name</th>
           <th>Calibration Date</th>
           <th>Sensors</th>
@@ -16,7 +17,7 @@ const TheadCells = ({searchResults}) => {
     case 'Sensor Calibration Output':
       return [(
         <tr key="SOHEADER">
-          <th>File Name</th>
+          <th className="tr-th-row">File Name</th>
           <th>Calibration File</th>
           <th>Generation Date</th>
           <th>Algorithm Version</th>
@@ -25,23 +26,21 @@ const TheadCells = ({searchResults}) => {
       )];
     case 'Base Calibration':
       return [(
-        <tr key="BCHEADER">
+        <tr key="BCHEADER" className="tr-th-row">
           <th>File Name</th>
-          <th>Calibration File</th>
+          <th>Calibration Date</th>
           <th>Sensors</th>
         </tr>
       )];
     case 'Performance Validation':
       return [(
-        <>
-        <tr key="PVHEADER">
+        <tr key="VFHEADER" className="tr-th-row">
           <th>File Name</th>
           <th>Validation Date</th>
           <th>Algorithm Version</th>
           <th>Base Station</th>
           <th>Sensors</th>
         </tr>
-        </>
       )];
     default:
       return null;

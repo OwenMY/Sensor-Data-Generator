@@ -5,6 +5,14 @@ const TBodyCells = ({searchResults, handleView}) => {
   const fileType = searchResults[0].fileType;
   const cellData = searchResults.slice(1);
 
+  cellData.sort((a, b) => {
+    const regex = /([0-9])\w+/g;
+    let numA = Number(a.file_name.match(regex));
+    let numB = Number(b.file_name.match(regex));
+
+    return numA - numB;
+  });
+
   switch(fileType) {
     case 'Sensor Calibration':
       return cellData.map((data, index) => (
@@ -34,7 +42,7 @@ const TBodyCells = ({searchResults, handleView}) => {
       ));
     case 'Performance Validation':
       return cellData.map((data, index) => (
-        <tr key={`PVBODY${data.file_name}`}>
+        <tr key={`PVBODY${index}`}>
           <td>{data.file_name}</td>
           <td>{data.validation_date}</td>
           <td>{data.algorithm_version}</td>

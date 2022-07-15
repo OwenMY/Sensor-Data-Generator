@@ -7,7 +7,7 @@ const THeadCells = ({sensorData}) => {
   switch(fileType) {
     case 'Sensor Calibration':
       return [(
-        <tr key="SCSHEADER">
+        <tr key="SCSHEADER" className="tr-th-row">
           <th>Sensor ID</th>
           <th>Sensor Type</th>
           <th>Sensor Data</th>
@@ -15,14 +15,14 @@ const THeadCells = ({sensorData}) => {
       )];
     case 'Sensor Calibration Output':
       return [(
-        <tr key="SOSHEADER">
+        <tr key="SOSHEADER" className="tr-th-row">
           <th>Sensor ID</th>
           <th>Parameters</th>
         </tr>
       )];
     case 'Base Calibration':
       return [(
-        <tr key="BCSHEADER">
+        <tr key="BCSHEADER" className="tr-th-row">
           <th>Sensor ID</th>
           <th>Sensor Type</th>
           <th>Sensor Data</th>
@@ -30,13 +30,11 @@ const THeadCells = ({sensorData}) => {
       )];
     case 'Performance Validation':
       return [(
-        <>
-        <tr key="PVKHEADER">
+        <tr key="PVHEADER" className="tr-th-row">
           <th>Sensor ID</th>
           <th>Accuracy</th>
           <th>Precision</th>
         </tr>
-        </>
       )];
     default:
       return null;

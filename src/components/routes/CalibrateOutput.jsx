@@ -44,7 +44,7 @@ const CalibrateOutput = () => {
     <div>
       <div className="alg-ctr">
         <label htmlFor="algorithms">Choose Algorithm</label>
-        <select name="algorithms" id="algorithms">
+        <select className=".alg-inp" name="algorithms" id="algorithms">
           <option value="v1.2.1">v1.2.1</option>
           <option value="v1.2.2">v1.2.2</option>
           <option value="v1.2.3">v1.2.3</option>

@@ -9,7 +9,6 @@ const CalTable = ({data}) => {
   data.sensors.sort((a, b) => a.sensor_unique_id - b.sensor_unique_id);
 
   const showModal = (e) => {
-    e.persist();
     const index = e.target.attributes[0].value;
     setSensorData(data.sensors?.[index]?.sensor_data);
     setShowModal(true);

@@ -20,7 +20,7 @@ const reducer = (state, action) => {
   switch (action.type) {
     case 'file type':
       if (action?.payload?.includes('Choose')) return {...state, fileType: null};
-      return {...state, fileType: action.payload};
+      return {...initialState, fileType: action.payload};
     case 'algorithm':
       if (action?.payload?.includes('Choose')) return {...state, algorithm: null};
       return {...state, algorithm: action.payload};
