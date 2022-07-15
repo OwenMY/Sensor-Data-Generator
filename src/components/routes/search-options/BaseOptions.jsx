@@ -9,7 +9,7 @@ const BaseOptions = ({dispatch}) => {
       name="Base Station"
       onChange={(e) => dispatch({type: 'base', payload: e.target.value})}
       >
-        <option value="Choose Base Station" defaultValue>Base Station</option>
+        <option value="Choose Base Station" defaultValue>Choose Base</option>
         <option value="BK001">BK001</option>
         <option value="BK002">BK002</option>
         <option value="BK003">BK003</option>

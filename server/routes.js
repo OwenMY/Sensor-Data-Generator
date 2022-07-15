@@ -10,6 +10,6 @@ router.post('/sensor-calibration-output', controllers.postSensorCalOutput);
 
 router.get('/performance-evaluation-output', controllers.getPerformanceEvalOutput);
 
-router.post('/search', controllers.getSearchQuery);
+router.get('/search', controllers.getSearchQuery);
 
 module.exports = router;
