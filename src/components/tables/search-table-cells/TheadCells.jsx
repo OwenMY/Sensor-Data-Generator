@@ -16,8 +16,8 @@ const TheadCells = ({searchResults}) => {
       )];
     case 'Sensor Calibration Output':
       return [(
-        <tr key="SOHEADER">
-          <th className="tr-th-row">File Name</th>
+        <tr key="SOHEADER" className="tr-th-row">
+          <th>File Name</th>
           <th>Calibration File</th>
           <th>Generation Date</th>
           <th>Algorithm Version</th>
