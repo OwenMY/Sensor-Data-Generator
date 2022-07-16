@@ -9,7 +9,7 @@ const ValidateSystem = () => {
   const [data, setValidationData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/performance-evaluation-output')
+    axios.get('http://13.57.235.108/performance-evaluation-output')
       .then(res => setValidationData([res.data]))
       .catch(err => console.error(err))
   }, []);

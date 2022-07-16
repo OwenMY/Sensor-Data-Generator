@@ -9,7 +9,7 @@ const CalibrateBase = () => {
   const [data, setBaseCalData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/base-calibration-data')
+    axios.get('http://13.57.235.108/base-calibration-data')
       .then(res => setBaseCalData([res.data]))
       .catch(err => console.error(err))
   }, []);
