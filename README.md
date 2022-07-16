@@ -20,7 +20,7 @@ git clone https://github.com/OwenMY/Sensor-Data-Generator-API.git
 npm install
 ```
 
-3. Set up config file in `.env` using `example.env` as an example.
+3. Set up `.env` using `example.env` as an example.
 
 4. In the terminal, move to the 'sql' directory, log into your database and run start.sql
  ```
