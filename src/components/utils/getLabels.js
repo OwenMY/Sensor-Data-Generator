@@ -25,7 +25,7 @@ const baseCalLabels = [
 ];
 
 const getLabels = (sensorData) => {
-  return sensorData['100000'] ? baseCalLabels : sensorCalLabels;
+  return sensorData.length < 20 ? baseCalLabels : sensorCalLabels;
 };
 
 export default getLabels;

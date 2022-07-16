@@ -1,7 +1,7 @@
 const getAxisData = (sensorData) => {
-  let start = sensorData['100000'] ? 10000 : 1000;
-  let inc = sensorData['100000'] ? 10000 : 1000;
-  let end = sensorData['100000'] ? 100001 : 10001;
+  let start = sensorData.length < 20 ? 0 : 1000;
+  let inc = sensorData.length < 20 ? 1 : 1000;
+  let end = sensorData.length < 20 ? 10 : 10001;
 
   let result = {
     x: [],
@@ -14,7 +14,6 @@ const getAxisData = (sensorData) => {
     result.y.push(sensorData[i].y);
     result.z.push(sensorData[i].z);
   }
-
   return result;
 };
 
