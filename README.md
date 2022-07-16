@@ -1,2 +1,39 @@
-# Sensor-Data-Generator-API
-This is an API as part of a full stack challenge to generate fake data points for a data management system. 
+# Sensor Data Generator
+This is an application as part of a full stack challenge to generate fake data points and manage the data.
+
+## Come Visit the App Live!
+Application is hosted on an AWS EC2 micro instance.  For the best experience, download the repository on your computer and set up with the Getting Started directions below.
+
+http://13.57.235.108:3000/
+
+<br>
+
+![image](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) ![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![image](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)  ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white) ![Chart.js](https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![image](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) ![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black) ![Babel](https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&logo=babel&logoColor=black)
+
+## Getting Started
+1. From a terminal, clone from [this](https://github.com/OwenMY/Sensor-Data-Generator-API.git) repo.
+```
+git clone https://github.com/OwenMY/Sensor-Data-Generator-API.git
+```
+2. Install dependencies
+```
+npm install
+```
+
+3. Set up config file in `.env` using `example.env` as an example.
+
+4. In the terminal, move to the 'sql' directory, log into your database and run start.sql
+ ```
+ \i start.sql
+ ```
+
+5. Move one directory up and run the 'build' script to transpile and bundle the application
+```
+npm run build
+```
+
+6. Start your server
+```
+npm start
+```
+7. Visit http://localhost:3000/
