@@ -26,8 +26,6 @@ const generateSensorData = () => {
       z: Number(g(0, 25).toFixed(5))
     };
 
-    console.log(coord, i)
-
     timeSeries.push(coord);
   }
 
