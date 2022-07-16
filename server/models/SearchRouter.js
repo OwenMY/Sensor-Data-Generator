@@ -14,7 +14,7 @@ const searchRoutes = (data) => {
     case 'Performance Validation':
       return queryValidationFiles(data);
     default:
-      return 'Invalid File Type';
+      return querySensorCalFiles(data);
   }
 };
 
