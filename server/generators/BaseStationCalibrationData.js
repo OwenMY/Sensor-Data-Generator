@@ -16,7 +16,7 @@ const generateSensorData = () => {
   let sampleSize = Math.round(generateNumber(100000, 120000));
   let timeSeries = [];
 
-  for (let i = 0; i < sampleSize + 1; i+=10000) {
+  for (let i = 0; i < sampleSize + 1; i+=1000) {
     let g = generateNumber;
 
     let coord = {
