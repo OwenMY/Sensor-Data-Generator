@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS sensor_filenames (
 );
 
 CREATE TABLE IF NOT EXISTS sensor_cal_data (
-  file_name VARCHAR(10) REFERENCES sensor_filename (file_name),
+  file_name VARCHAR(10) REFERENCES sensor_filenames (file_name),
   calibration_date DATE,
   sensor_unique_id INTEGER,
   sensor_type VARCHAR(5),
