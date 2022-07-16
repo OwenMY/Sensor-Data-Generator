@@ -9,7 +9,7 @@ const CalibrateSensors = () => {
   const [data, setSensorCalData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://13.57.235.108/sensor-calibration-data')
+    axios.get('http://13.57.235.108:3000/sensor-calibration-data')
       .then(res => setSensorCalData([res.data]))
       .catch(err => console.error(err))
   }, []);

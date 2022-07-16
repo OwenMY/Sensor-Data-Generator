@@ -15,7 +15,7 @@ const SearchResults = ({searchResults}) => {
     const params = searchResults[Number(index) + 1];
     params['fileType'] = searchResults[0].fileType;
 
-    axios.get('http://13.57.235.108/search-sensors', {params: params})
+    axios.get('http://13.57.235.108:3000/search-sensors', {params: params})
       .then(res => {
         res.data.unshift({
           fileType: searchResults[0].fileType,

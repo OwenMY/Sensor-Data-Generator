@@ -21,7 +21,7 @@ const SearchTableModal = ({setShowModal, sensorData}) => {
     params['fileType'] = sensorData[0].fileType;
     params['file_name'] = sensorData[0].file_name;
 
-    axios.get('http://13.57.235.108/search-sensor-data', {params: params})
+    axios.get('http://13.57.235.108:3000/search-sensor-data', {params: params})
       .then(res => {
         setIsLoading(false);
         setSensorFileData(res.data);
