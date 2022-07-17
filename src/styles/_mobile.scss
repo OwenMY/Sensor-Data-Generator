@@ -25,7 +25,8 @@
   }
   .alg-ctr {
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
+    justify-content: center;
   }
   canvas {
     height: 100vh;
