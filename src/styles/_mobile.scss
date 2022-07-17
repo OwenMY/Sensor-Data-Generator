@@ -1,0 +1,55 @@
+
+
+@media only screen and (max-Width: 768px) {
+  .search-ctr {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    padding: 1em;
+    gap: 1em;
+    border: none;
+    min-width: 15em;
+  }
+  .button-ctr {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    a {
+      margin: auto;
+    }
+  }
+  .results {
+    overflow-y: auto;
+    min-width: 20em;
+    margin: auto;
+  }
+  .loading {
+    margin: 0;
+    top: 0;
+    left: -10px;
+    position:relative;
+    img {
+      width: 1em;
+      height: 1em;
+      margin: auto;
+      animation: loading .1s infinite;
+      animation-timing-function: linear;
+    }
+  }
+  .alg-ctr {
+    display: flex;
+    flex-direction: column;
+  }
+  canvas {
+    height: 100vh;
+    width: 100%;
+  }
+  @keyframes loading{
+    from {
+      transform: rotate(0deg)
+    }
+    to {
+      transform: rotate(360deg)
+    }
+  }
+}
