@@ -22,7 +22,7 @@ http://13.57.235.108:3000/
 ## Getting Started
 1. From a terminal, clone from [this](https://github.com/OwenMY/Sensor-Data-Generator.git) repo.
 ```
-git clone https://github.com/OwenMY/Sensor-Data-Generator-API.git
+git clone https://github.com/OwenMY/Sensor-Data-Generator.git
 ```
 2. Install dependencies
 ```
