@@ -23,19 +23,6 @@
     min-width: 20em;
     margin: auto;
   }
-  .loading {
-    margin: 0;
-    top: 0;
-    left: -10px;
-    position:relative;
-    img {
-      width: 1em;
-      height: 1em;
-      margin: auto;
-      animation: loading .1s infinite;
-      animation-timing-function: linear;
-    }
-  }
   .alg-ctr {
     display: flex;
     flex-direction: column;
