@@ -2,11 +2,13 @@
   .search-ctr {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: left;
     font-weight: bold;
     padding: 1em;
     gap: 1em;
     border: none;
-    min-width: 15em;
+    max-width: 100vw;
   }
   .button-ctr {
     display: flex;
