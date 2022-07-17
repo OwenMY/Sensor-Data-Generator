@@ -46,7 +46,7 @@ tr:nth-child(even) {background-color: #3e1b3e;}
 }
 
 .modal-ctr {
-  background-color: #F7E7FB;
+
   table {
     background-color: #31293F;
   }
@@ -57,6 +57,7 @@ tr:nth-child(even) {background-color: #3e1b3e;}
 
 /* Charts */
 canvas {
+  background-color: #F7E7FB;
   height: 300px;
   width: 90%;
   box-sizing: none;
@@ -86,7 +87,7 @@ canvas {
 
 .search-ctr {
   display: grid;
-  grid-template-columns: 15% 30% 15% 30%;
+  grid-template-columns: 7em 12em 7em 11em;
   font-weight: bold;
   padding: 1em;
   gap: 1em;
