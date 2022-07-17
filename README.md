@@ -1,5 +1,5 @@
 # Sensor Data Generator
-This is an application as part of a full stack challenge to generate fake data points and manage the data. The purpose of this application was to simulate the calibration of an virtual reality system to generate data points and be able to query the information generated. Sensor calibrations are generated at random as well as base (the main machine mechanism) sensors.  The validation performance generator is a simulation of both the base and sensors being used together and outputing how accurate the system is after calibration.  
+This is an application as part of a full stack challenge to generate fake data points and manage the data. The purpose of this application was to simulate the calibration of a virtual reality system to generate data points and be able to query the information generated. Sensor calibrations are generated at random as well as base (the main machine mechanism) sensors.  The validation performance generator is a simulation of both the base and sensors being used together and outputing how accurate the system is after calibration.  
 
 ## Come Visit the App Live!
 Application is hosted on an AWS EC2 micro instance.  Also available on mobile!
