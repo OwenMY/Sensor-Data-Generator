@@ -52,7 +52,7 @@ const Search = () => {
   const handleSubmit = () => {
     if (!state.fileType) return;
 
-    axios.get('http://13.57.235.108:3000/search', {params: state})
+    axios.get(process.env.AXIOS_URL + '/search', {params: state})
       .then(res => setSearchResults([{fileType: state.fileType}, ...res.data]))
       .catch(err => console.error(err));
   };
